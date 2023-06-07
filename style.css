@@ -1,0 +1,536 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+/* https://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+////////////////////////////----------///////////////////////
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Montserrat", sans-serif;
+}
+
+nav {}
+
+nav.nav {
+  border-radius: 0;
+  margin-bottom: 0px;
+  height: 60px;
+}
+
+.navbar-brand {
+  font-size: 1.3em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+}
+
+.nav-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 10px black;
+}
+
+.navbar-nav>li>a {
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  transition: all .2s ease-in-out;
+}
+
+.nav > li:nth-child(1) > a:hover,
+.nav-menu li:nth-child(1) a:hover {
+  background-color: rgba(57, 198, 142, .6);
+  color: white;
+}
+
+.nav>li:nth-child(2)>a:hover,
+.nav-menu>li:nth-child(2)>a:hover {
+  background-color: #CEABB1;
+  color: white;
+}
+
+.nav>li:nth-child(3)>a:hover,
+.nav-menu>li:nth-child(3)>a:hover {
+  background-color: #89bdd3;
+  color: white;
+}
+
+.nav>li:nth-child(4)>a:hover,
+.nav-menu>li:nth-child(4)>a:hover {
+  background-color: #444545;
+  color: white;
+}
+
+
+/*----------Mobile-nav-------*/
+
+.nav-mobile {
+  position: absolute;
+  float: left;
+  width: 100%;
+  height: 100vh;
+}
+
+.nav-menu {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  color: black;
+  background: rgba(255, 255, 255, .5);
+}
+
+.nav-items {
+  text-align: center;
+  max-width: 400px;
+  width: 80%;
+}
+
+.nav-items a {
+  display: block;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  padding: 20px 30px;
+  border-bottom: 3px solid black;
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+}
+
+.nav-items:first-child a {
+  border-top: 3px solid black;
+}
+
+#menu-show {
+  display: none;
+}
+
+#menu-show:checked ~ main {
+  transform: translateX(400px);
+}
+
+#menu-show:checked ~ body {
+  background: pink;
+}
+
+
+/*----------Main------------*/
+
+.site-wrap {
+  position: relative;
+}
+
+main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: all 0.6s ease-in-out;
+}
+
+.jumbotron {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.2;
+  height: 600px;
+  background: url('http://img.plici.ro/images/2016/02/23/swirl_pattern80180.png');
+  background-repeat: repeat;
+  background-color: rgba(57, 198, 142, .6);
+  background-blend-mode: darken;
+  padding-top: 220px;
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.jumbotron a {
+  width: 200px;
+  height: 50px;
+  margin-top: 60px;
+  padding-top: 10px;
+  color: white;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 3px solid whitesmoke;
+  border-radius: 0;
+  box-shadow: 0px 3px grey;
+}
+
+.jumbotron a img {
+  margin: 0px auto;
+  //width: 50px;
+  height: 100%;
+}
+
+.btn-scroll:hover,
+.btn-scroll a:hover {
+  box-shadow: 0 3px black;
+  color: white;
+}
+
+section .about {
+  padding: 120px 0;
+  background-color: #E8AEB7; //#CEABB1;
+  font-family: 'Roboto', sans-serif;
+}
+
+.about h1,
+.portofolio h1,
+.contact h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+#scollImg {
+  padding: 30px;
+}
+
+.about h2 {
+  margin-top: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 30px 0;
+}
+
+.about h4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 2.2em;
+  color: #e62739;
+  text-transform: uppercase;
+}
+
+.about .card {
+  overflow: hidden;
+  height: 150%;
+  width: 100%;
+  background-color: whitesmoke;
+  box-shadow: 0 0px 10px #666;
+  padding: 30px;
+  padding-bottom: 60px;
+}
+
+#logo_user {
+  padding-top: 20px;
+}
+
+.progress-bar {
+  background-color: rgba(57, 198, 142, .6);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  border: none;
+}
+
+.portofolio {
+  background-color: #89bdd3;
+  padding: 60px 0;
+}
+
+.portofolio .thumbnail {
+  -webkit-transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  overflow: hidden;
+  border-radius: 0;
+  border: 0;
+  position: relative;
+}
+
+.thumbnail-items {}
+
+.thumbnail-items:hover {}
+
+.portofolio .thumbnail:hover {
+  opacity: 1;
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.portofolio .thumbnail:hover .message {
+  opacity: 1;
+}
+
+.portofolio .message {
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(to bottom right, pink, darkblue);
+  color: rgb(255, 255, 255);
+  mix-blend-mode: darken;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.contact {
+  background-color: rgb(126, 126, 207);
+  width: 100%;
+  height: 600px;
+  overflow: hidden, position: relative;
+}
+
+.contact h1 {
+  margin-top: 60px;
+  font-size: 40px;
+  color: white;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#map {
+  width: 100%;
+  height: 600px;
+  position: absolute;
+}
+
+form {
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  color: #eee;
+  width: 100%;
+  margin-top: 180px;
+  z-index: 99;
+}
+
+input {
+  width: 45%;
+  margin-bottom: 20px;
+  background: rgba(0, 0, 0, .6);
+  color: #eee;
+  font-weight: 100;
+  border: solid 1px black;
+  padding: 10px 20px;
+}
+
+input:first-of-type {
+  margin-right: 9%;
+}
+
+input:last-of-type {
+  width: 100px;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  resize: none;
+  margin-bottom: 20px;
+}
+
+textarea:focus,
+input:focus,
+input[type]:focus,
+.uneditable-input:focus {
+  border: 1px solid white;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #888;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #888;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #888;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #888;
+}
+
+
+/*--- media queries---*/
+
+@media (max-width: 780px) {
+  .nav {
+    flex-direction: row-reverse;
+  }
+  .nav ul {
+    display: none;
+  }
+  .jumbotron h1 {
+    font-size: 2.3em;
+  }
+  .card-info {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+}
